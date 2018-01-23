@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
     fs.appendFile('server.log', `${new Date().toString()} Under Maintenance` +'\n', (err) => {
         if(err){
-            console.log("Error writing logs");
+            console.log("Error writing logs to file");
         }
     });
     res.render('maintenance.hbs');
