@@ -21,14 +21,14 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res, next) => {
-    fs.appendFile('server.log', `${new Date().toString()} Under Maintenance` +'\n', (err) => {
-        if(err){
-            console.log("Error writing logs to file");
-        }
-    });
-    res.render('maintenance.hbs');
-});
+// app.use((req, res, next) => {
+//     fs.appendFile('server.log', `${new Date().toString()} Under Maintenance` +'\n', (err) => {
+//         if(err){
+//             console.log("Error writing logs");
+//         }
+//     });
+//     res.render('maintenance.hbs');
+// });
 
 hbs.registerHelper('getCurrentYear', () => {
     return new Date().getFullYear();
