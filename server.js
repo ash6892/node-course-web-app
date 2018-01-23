@@ -53,4 +53,5 @@ app.get('/about', (req, res) => {
 
 app.listen(3000,() => {
     console.log("Server started at port 3000");
+    console.log("Access application at http://localhost:3000");
 });
