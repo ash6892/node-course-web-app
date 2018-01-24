@@ -53,6 +53,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs',{
+        pageTitle: 'Project Portfolio',
+        pageBody: 'This will list all the projects'
+    });
+});
+
 app.listen(port,() => {
     console.log(`Server started at port ${port}`);
     //console.log("Access application at http://localhost:3000");
